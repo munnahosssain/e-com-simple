@@ -4,7 +4,7 @@ import './Shop.css';
 import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
 const Shop = () => {
-    const firstTen = fakeData.slice(0, 10);
+    const firstTen = fakeData.slice(0, 50);
     const [products, setProducts] = useState(firstTen);
     const [cart, setCart] = useState([]);
 
@@ -18,6 +18,7 @@ const Shop = () => {
             <div className="product-container">
                 {
                     products.map(prdct => <Product
+                        showAddButton={true}
                         handleAddProducts={handleAddProducts}
                         product={prdct}>
                     </Product>)
